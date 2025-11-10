@@ -67,3 +67,13 @@ console.log(createEmployee(500));
 console.log(createEmployee(700));
 
 console.log(createEmployee(100));
+
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass: string) {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else {
+    return "Teaching History";
+  }
+}
