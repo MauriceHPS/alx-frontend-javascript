@@ -60,16 +60,13 @@ interface ContextTeacher {
 }
 
 interface printTeacherFunction {
-  (firstLetter: string, lastName: string): string;
+  (firstLetter: string, lastName: string): ContextTeacher;
 }
 
-function printTeacher(
-  this: ContextTeacher,
-  firstLetter: string,
-  lastName: string
-) {
-  this.firstLetter = firstLetter.charAt(0);
-  this.lastName = lastName;
-
-  return `${this.firstLetter} ${this.lastName}`;
-}
+const printTeacher: printTeacherFunction = (firstLetter, lastName) => {
+  const result: ContextTeacher = {
+    firstLetter: firstLetter.charAt(0),
+    lastName: lastName,
+  };
+  return result;
+};
