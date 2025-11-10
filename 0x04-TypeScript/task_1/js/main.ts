@@ -58,13 +58,10 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = function printTeacher(
-  firstName,
-  lastName
-): string {
+function printTeacher({ firstName, lastName }) {
   firstName = firstName.charAt(0);
 
   return `${firstName}. ${lastName}`;
-};
+}
 
 console.log(printTeacher("Helmut", "Maurice"));
