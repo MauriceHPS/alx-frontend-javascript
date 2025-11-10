@@ -12,7 +12,7 @@ interface TeacherInterface {
 
 class Director implements DirectorInterface {
   workFromHome(): string {
-    return "Work from home";
+    return "Working from home";
   }
 
   getCoffeeBreak(): string {
