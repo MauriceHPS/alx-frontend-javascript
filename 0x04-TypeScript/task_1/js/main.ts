@@ -30,8 +30,8 @@ const teacher2: Teacher = {
 
 class NewTeacher {
   readonly _firstName: string;
-  private _lastName: string;
-  readonly _fullTimeEmployee: boolean;
+  readonly _lastName: string;
+  _fullTimeEmployee: boolean;
   _yearsOfExperience?: number;
   _location: string;
 
