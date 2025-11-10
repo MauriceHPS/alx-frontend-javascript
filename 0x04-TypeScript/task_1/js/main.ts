@@ -22,9 +22,9 @@ const teacher2: Teacher = {
   location: "Nairobi",
 };
 
-// interface extendedTeacher extends Teacher {
-//   contract: boolean;
-// }
+interface Director extends Teacher {
+  numberOfReports: number;
+}
 
 /** modifiable props */
 
