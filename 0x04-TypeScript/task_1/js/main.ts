@@ -58,7 +58,7 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = function (
+const printTeacher: printTeacherFunction = function printTeacher(
   firstName,
   lastName
 ): string {
