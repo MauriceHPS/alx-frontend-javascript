@@ -62,9 +62,9 @@ const printTeacher: printTeacherFunction = function printTeacher(
   firstName,
   lastName
 ): string {
-  const firstLetter = firstName.charAt(0);
+  firstName = firstName.charAt(0);
 
-  return `${firstLetter}. ${lastName}`;
+  return `${firstName}. ${lastName}`;
 };
 
 console.log(printTeacher("Helmut", "Maurice"));
