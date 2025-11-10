@@ -43,18 +43,11 @@ class Teacher implements TeacherInterface {
 }
 
 function createEmployee(salary: string | number) {
-  let profession;
-  if (typeof salary === "number") {
-    if (salary < 500) {
-      profession = "Teacher";
-    } else {
-      profession = "Director";
-    }
+  if (typeof salary === "number" && salary < 500) {
+    return new Teacher();
   } else {
-    profession = "Director";
+    return new Director();
   }
-
-  return profession;
 }
 
 console.log(createEmployee(500));
