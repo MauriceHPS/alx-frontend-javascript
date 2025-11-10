@@ -58,10 +58,44 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-function printTeacher({ firstName, lastName }) {
+const printTeacher: printTeacherFunction = function printTeacher(
+  firstName,
+  lastName
+): string {
   firstName = firstName.charAt(0);
 
   return `${firstName}. ${lastName}`;
-}
+};
 
 console.log(printTeacher("Helmut", "Maurice"));
+
+interface StudentInterface {
+  firstName: string;
+  lastName: string;
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+interface StudentClassConstructor {
+  new (firstName: string, lastName: string): StudentInterface;
+}
+
+class StudentClass implements StudentInterface {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework() {
+    return "Currently Working";
+  }
+
+  displayName() {
+    return this.firstName;
+  }
+
+  s = new StudentClass("Pearson", "Specter");
+}
