@@ -53,3 +53,23 @@ class NewTeacher {
 const teacher3 = new NewTeacher("Jasmine", "Jenner", true, "Albuquerque", 10);
 
 console.log(teacher3);
+
+interface ContextTeacher {
+  firstLetter: string;
+  lastName: string;
+}
+
+interface printTeacherFunction {
+  (firstLetter: string, lastName: string): string;
+}
+
+function printTeacher(
+  this: ContextTeacher,
+  firstLetter: string,
+  lastName: string
+) {
+  this.firstLetter = firstLetter.charAt(0);
+  this.lastName = lastName;
+
+  return `${this.firstLetter} ${this.lastName}`;
+}
