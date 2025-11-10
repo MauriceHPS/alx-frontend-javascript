@@ -54,19 +54,14 @@ const teacher3 = new NewTeacher("Jasmine", "Jenner", true, "Albuquerque", 10);
 
 console.log(teacher3);
 
-interface ContextTeacher {
-  firstLetter: string;
+interface printTeacherFunction {
+  firstName: string;
   lastName: string;
 }
 
-interface printTeacherFunction {
-  (firstLetter: string, lastName: string): ContextTeacher;
-}
+function printTeacher(firstName: string, lastName: string) {
+  this.firstName = firstName.charAt(0);
+  this.lastName = lastName;
 
-const printTeacher: printTeacherFunction = function (firstName, lastName) {
-  const result: ContextTeacher = {
-    firstLetter: firstName.charAt(0),
-    lastName: lastName,
-  };
-  return result;
-};
+  const result = `${this.firstName} ${this.lastName}`;
+}
