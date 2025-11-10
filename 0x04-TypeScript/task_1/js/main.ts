@@ -55,17 +55,16 @@ const teacher3 = new NewTeacher("Jasmine", "Jenner", true, "Albuquerque", 10);
 console.log(teacher3);
 
 interface printTeacherFunction {
-  firstName: string;
-  lastName: string;
+  (firstName: string, lastName: string): string;
 }
 
-function printTeacher(firstName: string, lastName: string) {
-  this.firstName = firstName.charAt(0);
-  this.lastName = lastName;
-
-  const firstLetter = this.firstName;
+const printTeacher: printTeacherFunction = function (
+  firstName,
+  lastName
+): string {
+  const firstLetter = firstName.charAt(0);
 
   return `${firstLetter}. ${lastName}`;
-}
+};
 
 console.log(printTeacher("Helmut", "Maurice"));
