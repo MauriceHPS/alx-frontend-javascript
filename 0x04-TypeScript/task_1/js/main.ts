@@ -80,7 +80,7 @@ interface StudentClassConstructor {
   new (firstName: string, lastName: string): StudentInterface;
 }
 
-class StudentClass implements StudentInterface {
+class StudentClass {implements StudentInterface {
   firstName: string;
   lastName: string;
 
@@ -90,7 +90,7 @@ class StudentClass implements StudentInterface {
   }
 
   workOnHomework() {
-    return "Currently Working";
+    return "Currently working";
   }
 
   displayName() {
