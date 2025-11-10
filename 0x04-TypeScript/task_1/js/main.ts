@@ -63,9 +63,9 @@ interface printTeacherFunction {
   (firstLetter: string, lastName: string): ContextTeacher;
 }
 
-const printTeacher: printTeacherFunction = (firstLetter, lastName) => {
+const printTeacher: printTeacherFunction = function (firstName, lastName) {
   const result: ContextTeacher = {
-    firstLetter: firstLetter.charAt(0),
+    firstLetter: firstName.charAt(0),
     lastName: lastName,
   };
   return result;
