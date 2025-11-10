@@ -63,7 +63,9 @@ function printTeacher(firstName: string, lastName: string) {
   this.firstName = firstName.charAt(0);
   this.lastName = lastName;
 
-  return `${this.firstName} ${lastName}`;
+  const firstLetter = this.firstName;
+
+  return `${firstLetter}. ${lastName}`;
 }
 
 console.log(printTeacher("Helmut", "Maurice"));
