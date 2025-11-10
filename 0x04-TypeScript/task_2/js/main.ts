@@ -70,7 +70,7 @@ console.log(createEmployee(100));
 
 type Subjects = "Math" | "History";
 
-function teachClass(todayClass: string) {
+function teachClass(todayClass: Subjects) {
   if (todayClass === "Math") {
     return "Teaching Math";
   } else {
