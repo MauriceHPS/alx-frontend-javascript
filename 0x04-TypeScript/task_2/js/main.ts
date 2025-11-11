@@ -73,8 +73,10 @@ type Subjects = "Math" | "History";
 function teachClass(todayClass: Subjects) {
   if (todayClass === "Math") {
     return "Teaching Math";
-  }
-  if (todayClass === "History") {
+  } else {
     return "Teaching History";
   }
 }
+
+console.log("Math");
+console.log("History");
