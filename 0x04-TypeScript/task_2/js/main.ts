@@ -78,5 +78,8 @@ const teachClass = (todayClass: Subjects) => {
   }
 };
 
-console.log("Math");
-console.log("History");
+teachClass("Math");
+teachClass("History");
+
+console.log(teachClass("Math"));
+console.log(teachClass("History"));
